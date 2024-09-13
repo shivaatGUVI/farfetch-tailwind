@@ -6,7 +6,7 @@
     <title>Farfetch</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
-  <body>
+  <body class="box-border">
     <!-- Promotional banner -->
 
     <header class="bg-gray-200 text-center py-1">
@@ -42,12 +42,11 @@
         <div>
           <h1 class="uppercase font-bold text-4xl">farfetch</h1>
         </div>
-        <!-- Other navs -->
         <div class="w-[20%] flex justify-end items-end gap-x-2">
           <div
             class="hover:bg-gray-100 rounded-md w-[2.8rem] cursor-pointer object-contain p-2"
           >
-            <img src="./images/icons8-india-48.png" alt="Indian-flag" />
+            <img src="./images/icons8-india-48.png" alt="india-logo" />
           </div>
           <div
             class="hover:bg-gray-100 rounded-md w-[2.8rem] cursor-pointer object-contain p-2"
@@ -71,7 +70,7 @@
       <div class="flex justify-end">
         <div class="relative w-[25%]">
           <input
-            class="w-full rounded-lg text-base border-2 p-2 pl-12"
+            class="w-full rounded-lg text-base border-[1.5px] p-2 pl-12"
             type="text"
             placeholder="Search"
           />
@@ -103,7 +102,7 @@
 
     <!-- Main content -->
 
-    <main class="relative top-8">
+    <main class="relative top-8 mb-28">
       <div class="text-center mb-10">
         <h3 class="text-3xl tracking-wide">Choose a department</h3>
       </div>
@@ -132,63 +131,103 @@
       </div>
     </main>
 
-    <br />
-
     <!-- Information section  -->
 
-    <section>
-      <div>
-        <img src="./images/icons8-hanger-24.png" alt="how-to-shop-logo" />
-        <h4>how to shop</h4>
-        <p>your guide to shopping and placing orders</p>
+    <section
+      class="relative top-12 mb-28 w-[90%] m-auto flex justify-between items-center"
+    >
+      <div
+        class="border-[1px] hover:bg-gray-100 cursor-pointer w-[32%] p-4 py-6"
+      >
+        <img
+          class="mb-4"
+          src="./images/icons8-hanger-24.png"
+          alt="how-to-shop-logo"
+        />
+        <h4 class="uppercase mb-2">how to shop</h4>
+        <p class="text-[0.9rem] tracking-wide font-medium">
+          Your guide to shopping and placing orders
+        </p>
       </div>
-      <div>
-        <img src="./images/icons8-question-mark-24.png" alt="faq-logo" />
-        <h4>faqs</h4>
-        <p>your questions answered</p>
+      <div
+        class="border-[1px] hover:bg-gray-100 cursor-pointer w-[32%] p-4 py-6"
+      >
+        <img
+          class="mb-4"
+          src="./images/icons8-question-mark-24.png"
+          alt="faq-logo"
+        />
+        <h4 class="uppercase mb-2">faqs</h4>
+        <p class="text-[0.9rem] tracking-wide font-medium">
+          Your questions answered
+        </p>
       </div>
-      <div>
-        <img src="./images/icons8-topic-24.png" alt="need-help-logo" />
-        <h4>need help?</h4>
-        <p>contact our global customer service team</p>
+      <div
+        class="border-[1px] hover:bg-gray-100 cursor-pointer w-[32%] p-4 py-6"
+      >
+        <img
+          class="mb-4"
+          src="./images/icons8-topic-24.png"
+          alt="need-help-logo"
+        />
+        <h4 class="uppercase mb-2">need help?</h4>
+        <p class="text-[0.9rem] tracking-wide font-medium">
+          Contact our global customer service team
+        </p>
       </div>
     </section>
 
-    <br />
-
     <!-- Contact us section  -->
 
-    <section>
+    <section
+      class="w-[90%] m-auto relative mb-12 pb-10 top-12 flex justify-between items-start"
+    >
       <!-- First child -->
 
-      <div>
-        <h3>never miss a thing</h3>
-        <p>
-          signup for promotions, tailored new arrivals, stock updates and more -
+      <div class="w-[45%]">
+        <h3 class="text-2xl font-bold uppercase mb-3">never miss a thing</h3>
+        <p class="text-md tracking-wide">
+          Signup for promotions, tailored new arrivals, stock updates and more -
           straight to your inbox
         </p>
       </div>
 
       <!-- Second child  -->
 
-      <div>
-        <p>get updates by</p>
-        <form>
+      <div class="w-[50%]">
+        <p class="uppercase mb-3">get updates by</p>
+        <form class="flex flex-col gap-y-6 mb-3">
           <span>
-            <label for="email">Email</label>
-            <input type="checkbox" id="email" />
-            <input type="email" placeholder="your email address" />
+            <span class="block">
+              <input class="mb-3 mr-1" type="checkbox" id="email" />
+              <label for="email">Email</label>
+            </span>
+            <input
+              class="border-[1px] w-[80%] p-2 pl-4 rounded-md"
+              type="email"
+              placeholder="Your email address"
+            />
           </span>
 
           <span>
-            <label for="phone">Phone</label>
-            <input type="checkbox" id="phone" />
-            <input type="tel" placeholder="your phone number" />
+            <span class="block">
+              <input class="mb-3 mr-1" type="checkbox" id="phone" />
+              <label for="phone">SMS</label>
+            </span>
+            <input
+              class="border-[1px] w-[80%] p-2 pl-4 rounded-md"
+              type="tel"
+              placeholder="Your phone number"
+            />
           </span>
 
-          <input type="submit" value="Sign Up" />
+          <input
+            class="border w-[15%] p-2 bg-black text-white rounded-md text-[0.85rem] font-semibold cursor-pointer"
+            type="submit"
+            value="Sign Up"
+          />
         </form>
-        <p>
+        <p class="text-[0.8rem] tracking-wide text-justify">
           By signing up, you consent to receiving marketing by email and/or SMS
           and acknowledge you have read our Privacy Policy. Unsubscribe anytime
           at the bottom of our emails or by replying STOP to any of our SMS.
@@ -196,75 +235,96 @@
       </div>
     </section>
 
-    <br />
-
     <!-- Footer section  -->
 
-    <footer>
+    <footer class="bg-gray-200">
       <!-- First container -->
-      <div>
+      <div
+        class="py-4 px-8 flex justify-between items-start border-[1px] border-b-white"
+      >
         <!-- First child -->
         <div>
           <!-- Heading container  -->
-          <div>
-            <h5>Customer Service</h5>
+          <div class="mb-5">
+            <h5 class="font-bold text-lg">Customer Service</h5>
           </div>
           <!-- Content container  -->
-          <div>
-            <p><a href="/">contact us</a></p>
-            <p><a href="/">faqs</a></p>
-            <p><a href="">order and delivery</a></p>
-            <p><a href="">returns and refunds</a></p>
-            <p><a href="">payment and pricing</a></p>
-            <p><a href="">cryptocurrency payments</a></p>
+          <div class="flex flex-col gap-y-2">
+            <p class="text-md hover:underline"><a href="/">contact us</a></p>
+            <p class="text-md hover:underline"><a href="/">faqs</a></p>
+            <p class="text-md hover:underline">
+              <a href="">order and delivery</a>
+            </p>
+            <p class="text-md hover:underline">
+              <a href="">returns and refunds</a>
+            </p>
+            <p class="text-md hover:underline">
+              <a href="">payment and pricing</a>
+            </p>
+            <p class="text-md hover:underline">
+              <a href="">cryptocurrency payments</a>
+            </p>
           </div>
         </div>
 
         <!-- Second child -->
         <div>
           <!-- Heading container  -->
-          <div>
-            <h5>About FARFETCH</h5>
+          <div class="mb-5">
+            <h5 class="font-bold text-lg">About FARFETCH</h5>
           </div>
           <!-- Content container  -->
-          <div>
-            <p><a href="/">about us</a></p>
-            <p><a href="/">investors</a></p>
-            <p><a href="/">FARFETCH partner boutiques</a></p>
-            <p><a href="/">careers</a></p>
-            <p><a href="/">FARFETCH app</a></p>
-            <p><a href="/">modern slavery statements</a></p>
+          <div class="flex flex-col gap-y-2">
+            <p class="text-md hover:underline"><a href="/">about us</a></p>
+            <p class="text-md hover:underline"><a href="/">investors</a></p>
+            <p class="text-md hover:underline">
+              <a href="/">FARFETCH partner boutiques</a>
+            </p>
+            <p class="text-md hover:underline"><a href="/">careers</a></p>
+            <p class="text-md hover:underline"><a href="/">FARFETCH app</a></p>
+            <p class="text-md hover:underline">
+              <a href="/">modern slavery statements</a>
+            </p>
           </div>
         </div>
 
         <!-- Third child -->
         <div>
           <!-- Heading container  -->
-          <div>
-            <h5>Discounts and membership</h5>
+          <div class="mb-5">
+            <h5 class="font-bold text-lg">Discounts and membership</h5>
           </div>
           <!-- Content container  -->
-          <div>
-            <p><a href="/">affiliate program</a></p>
-            <p><a href="/">FARFETCH membership</a></p>
-            <p><a href="/">student discount UNiDAYS</a></p>
-            <p><a href="/">youth discount</a></p>
+          <div class="flex flex-col gap-y-2 mb-8">
+            <p class="text-md hover:underline">
+              <a href="/">affiliate program</a>
+            </p>
+            <p class="text-md hover:underline">
+              <a href="/">FARFETCH membership</a>
+            </p>
+            <p class="text-md hover:underline">
+              <a href="/">student discount UNiDAYS</a>
+            </p>
+            <p class="text-md hover:underline">
+              <a href="/">youth discount</a>
+            </p>
           </div>
 
           <!-- Social container  -->
           <div>
             <!-- Heading container  -->
-            <div>
-              <h5>follow us</h5>
+            <div class="mb-3">
+              <h5 class="font-bold text-l">Follow us</h5>
             </div>
 
             <!-- Content container  -->
 
-            <div>
+            <div class="flex justify-between items-start">
               <!-- Facebook div  -->
               <div>
                 <a href="/"
                   ><img
+                    class="w-[60px] object-cover"
                     src="./images/icons8-facebook-circled-24.png"
                     alt="facebook-logo"
                 /></a>
@@ -274,6 +334,7 @@
               <div>
                 <a href="/"
                   ><img
+                    class="w-[30px] object-cover"
                     src="./images/icons8-instagram-old-48.png"
                     alt="facebook-logo"
                 /></a>
@@ -283,6 +344,7 @@
               <div>
                 <a href="/"
                   ><img
+                    class="w-[30px] object-cover"
                     src="./images/icons8-twitter-40.png"
                     alt="facebook-logo"
                 /></a>
@@ -292,6 +354,7 @@
               <div>
                 <a href="/"
                   ><img
+                    class="w-[30px] object-cover"
                     src="./images/icons8-snapchat-squared-48.png"
                     alt="facebook-logo"
                 /></a>
@@ -302,26 +365,34 @@
       </div>
 
       <!-- Second container  -->
-      <div>
+      <div class="py-4 px-8">
         <!-- First child  -->
-        <div>
+        <div class="flex items-center gap-x-10 mb-4">
           <div>
-            <p><a href="/">privacy policy</a></p>
+            <p class="capitalize hover:text-gray-500 underline">
+              <a href="/">privacy policy</a>
+            </p>
           </div>
           <div>
-            <p><a href="/">terms and conditions</a></p>
+            <p class="capitalize hover:text-gray-500 underline">
+              <a href="/">terms and conditions</a>
+            </p>
           </div>
           <div>
-            <p><a href="/">accessiblity</a></p>
+            <p class="capitalize hover:text-gray-500 underline">
+              <a href="/">accessiblity</a>
+            </p>
           </div>
           <div>
-            <p><a href="/">sitemap</a></p>
+            <p class="capitalize hover:text-gray-500 underline">
+              <a href="/">sitemap</a>
+            </p>
           </div>
         </div>
 
         <!-- Second child  -->
-        <div>
-          <p>
+        <div class="w-[70%]">
+          <p class="text-sm tracking-wide text-justify">
             'FARFETCH' and the 'FARFETCH' logo are trade marks of FARFETCH UK
             Limited and are registered in numerous jurisdictions around the
             world. © Copyright 2024 FARFETCH UK Limited. All rights reserved.
