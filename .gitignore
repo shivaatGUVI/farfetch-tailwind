@@ -1,2 +1,4 @@
 main.css
 tailwind.config.js
+node_modules
+package-lock.json

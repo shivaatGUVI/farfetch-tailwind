@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Farfetch</title>
     <link rel="stylesheet" href="./index.css" />
+    <style>
+      .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
   </head>
   <body class="box-border">
     <!-- Promotional banner -->
 
-    <header class="bg-gray-200 text-center py-1">
+    <header
+      class="bg-gray-200 xs:text-left xs:px-4 sm:text-left sm:px-4 md:text-left md:px-4 lg:text-center xl:text-center 2xl:text-left py-1"
+    >
       <p class="text-sm font-normal">Returns are free within 30 days</p>
     </header>
 
@@ -21,7 +28,9 @@
       <!-- First child -->
       <div class="flex justify-between items-center mb-4">
         <!-- Wears section  -->
-        <div class="w-fit flex items-center">
+        <div
+          class="w-fit 2xl:flex xl:flex lg:flex md:hidden sm:hidden xs:hidden items-center"
+        >
           <div
             class="hover:bg-gray-100 cursor-pointer py-2 px-3 hover:text-gray-600 hover:rounded-l-lg"
           >
@@ -38,28 +47,44 @@
             <h2 class="capitalize">kidswear</h2>
           </div>
         </div>
+
+        <!-- sm -> display: block -->
+        <select
+          class="xs:block sm:block md:block lg:hidden xl:hidden 2xl:hidden capitalize font-bold xs:text-[0.75rem] sm:text-[0.8rem] md:text-sm text-md p-3 px-4 hover:bg-gray-100 hover:rounded-md cursor-pointer outline-none"
+        >
+          <option value="" disabled>Select</option>
+          <option value="menswear">menswear</option>
+          <option value="womenswear">womenswear</option>
+          <option value="kidswear">kidswear</option>
+        </select>
         <!-- Brand name -->
         <div>
-          <h1 class="uppercase font-bold text-4xl">farfetch</h1>
+          <h1
+            class="uppercase font-bold sm:text-xl md:text-xl lg:text-3xl xl:text-3xl 2xl:text-3xl"
+          >
+            farfetch
+          </h1>
         </div>
-        <div class="w-[20%] flex justify-end items-end gap-x-2">
+        <div
+          class="xs:w-[30%] sm:w-[25%] md:w-[25%] lg:w-[20%] flex justify-end items-end gap-x-2"
+        >
           <div
-            class="hover:bg-gray-100 rounded-md w-[2.8rem] cursor-pointer object-contain p-2"
+            class="hover:bg-gray-100 rounded-md xs:w-[2rem] sm:w-[2rem] md:w-[2.1rem] lg:w-[2.8rem] cursor-pointer object-contain p-2"
           >
             <img src="./images/icons8-india-48.png" alt="india-logo" />
           </div>
           <div
-            class="hover:bg-gray-100 rounded-md w-[2.8rem] cursor-pointer object-contain p-2"
+            class="hover:bg-gray-100 rounded-md xs:w-[2rem] sm:w-[2rem] md:w-[2.1rem] lg:w-[2.8rem] cursor-pointer object-contain p-2"
           >
             <img src="./images/icons8-account-60.png" alt="account-logo" />
           </div>
           <div
-            class="hover:bg-gray-100 rounded-md w-[2.8rem] cursor-pointer object-contain p-2"
+            class="hover:bg-gray-100 rounded-md xs:w-[2rem] sm:w-[2rem] md:w-[2.1rem] lg:w-[2.8rem] cursor-pointer object-contain p-2"
           >
             <img src="./images/icons8-heart-50.png" alt="like-logo" />
           </div>
           <div
-            class="hover:bg-gray-100 rounded-md w-[2.8rem] cursor-pointer object-contain p-2"
+            class="hover:bg-gray-100 rounded-md xs:w-[2rem] sm:w-[2rem] md:w-[2.1rem] lg:w-[2.8rem] cursor-pointer object-contain p-2"
           >
             <img src="./images/icons8-shopping-cart-48.png" alt="cart-logo" />
           </div>
@@ -68,17 +93,18 @@
 
       <!-- Second child -->
       <div class="flex justify-end">
-        <div class="relative w-[25%]">
+        <div class="relative xs:w-[35%] w-[25%]">
           <input
-            class="w-full rounded-lg text-base border-[1.5px] p-2 pl-12"
+            class="w-full xs:rounded-md rounded-lg xs:text-[0.75rem] sm:text-sm md:text-sm lg:text-base border-[1.5px] xs:p-1 xs:pl-7 p-2 pl-20 md:pl-8 lg:pl-10"
             type="text"
             placeholder="Search"
           />
-          <div class="absolute left-4 top-3">
+          <div
+            class="absolute xs:h-[12px] xs:w-[12px] sm:h-[15px] sm:w-[15px] w-[20px] h-[20px] xs:left-2 xs:top-[0.5rem] sm:left-3 md:left-3 md:top-[0.5rem] sm:top-[0.65rem] lg:left-4 lg:top-[0.6rem]"
+          >
             <svg
+              class="w-full h-full"
               fill="#000000"
-              height="20px"
-              width="20px"
               version="1.1"
               id="Capa_1"
               viewBox="0 0 488.4 488.4"
@@ -102,27 +128,35 @@
 
     <!-- Main content -->
 
-    <main class="relative top-8 mb-28">
-      <div class="text-center mb-10">
-        <h3 class="text-3xl tracking-wide">Choose a department</h3>
+    <main class="relative w-[90%] m-auto top-8 mb-28">
+      <div
+        class="xs:text-left sm:text-left md:text-left lg:text-center xl:text-center 2xl:text-center xs:mb-5 sm:mb-5 md:mb-5 lg:mb-10"
+      >
+        <h3
+          class="xs:text-xl sm:text-xl md:text-2xl lg:text-3xl 2xl:text-3xl tracking-wide"
+        >
+          Choose a department
+        </h3>
       </div>
-      <div class="w-[90%] m-auto flex justify-between items-center">
+      <div
+        class="scrollbar-hidden w-full flex justify-between items-center xs:gap-x-4 sm:gap-x-4 md:gap-x-4 lg:gap-0 xl:gap-0 2xl:gap-0 xs:overflow-x-auto sm:overflow-x-auto md:overflow-x-auto lg:overflow-hidden xl:overflow-hidden 2xl:overflow-hidden"
+      >
         <div
-          class="w-[360px] h-[200px] cursor-pointer bg-no-repeat bg-cover flex justify-center items-center bg-women"
+          class="w-[360px] h-[200px] flex-shrink-0 cursor-pointer bg-no-repeat bg-cover flex justify-center items-center bg-women"
         >
           <h4 class="text-white font-bold text-3xl tracking-wide uppercase">
             womenswear
           </h4>
         </div>
         <div
-          class="w-[360px] h-[200px] cursor-pointer bg-no-repeat bg-cover flex justify-center items-center bg-men"
+          class="w-[360px] h-[200px] flex-shrink-0 cursor-pointer bg-no-repeat bg-cover flex justify-center items-center bg-men"
         >
           <h4 class="text-white font-bold text-3xl tracking-wide uppercase">
             menswear
           </h4>
         </div>
         <div
-          class="w-[360px] h-[200px] cursor-pointer bg-no-repeat bg-cover flex justify-center items-center bg-kids"
+          class="w-[360px] h-[200px] flex-shrink-0 cursor-pointer bg-no-repeat bg-cover flex justify-center items-center bg-kids"
         >
           <h4 class="text-white font-bold text-3xl tracking-wide uppercase">
             kidswear
@@ -134,10 +168,10 @@
     <!-- Information section  -->
 
     <section
-      class="relative top-12 mb-28 w-[90%] m-auto flex justify-between items-center"
+      class="relative top-12 mb-28 w-[90%] m-auto flex xs:flex-col xs:gap-y-4 sm:flex-col sm:gap-y-4 md:flex-col md:gap-y-4 lg:flex-row xl:flex-row 2xl:flex-row justify-between items-start"
     >
       <div
-        class="border-[1px] hover:bg-gray-100 cursor-pointer w-[32%] p-4 py-6"
+        class="border-[1px] hover:bg-gray-100 cursor-pointer xs:w-[100%] sm:w-[100%] md:w-[100%] lg:w-[32%] xl:w-[32%] 2xl:w-[32%] p-4 py-6"
       >
         <img
           class="mb-4"
@@ -150,7 +184,7 @@
         </p>
       </div>
       <div
-        class="border-[1px] hover:bg-gray-100 cursor-pointer w-[32%] p-4 py-6"
+        class="border-[1px] hover:bg-gray-100 cursor-pointer xs:w-[100%] sm:w-[100%] md:w-[100%] lg:w-[32%] xl:w-[32%] 2xl:w-[32%] p-4 py-6"
       >
         <img
           class="mb-4"
@@ -158,12 +192,14 @@
           alt="faq-logo"
         />
         <h4 class="uppercase mb-2">faqs</h4>
-        <p class="text-[0.9rem] tracking-wide font-medium">
+        <p
+          class="text-[0.9rem] tracking-wide font-medium lg:line-clamp-1 md:line-clamp-1 xl:line-clamp-1 text-ellipsis"
+        >
           Your questions answered
         </p>
       </div>
       <div
-        class="border-[1px] hover:bg-gray-100 cursor-pointer w-[32%] p-4 py-6"
+        class="border-[1px] hover:bg-gray-100 cursor-pointer xs:w-[100%] sm:w-[100%] md:w-[100%] lg:w-[32%] xl:w-[32%] 2xl:w-[32%] p-4 py-6"
       >
         <img
           class="mb-4"
@@ -203,7 +239,7 @@
               <label for="email">Email</label>
             </span>
             <input
-              class="border-[1px] w-[80%] p-2 pl-4 rounded-md"
+              class="border-[1px] xs:w-[100%] sm:w-[100%] md:w-[100%] lg:w-[80%] xl:w-[80%] 2xl:w-[80%] p-2 pl-4 rounded-md"
               type="email"
               placeholder="Your email address"
             />
@@ -215,14 +251,14 @@
               <label for="phone">SMS</label>
             </span>
             <input
-              class="border-[1px] w-[80%] p-2 pl-4 rounded-md"
+              class="border-[1px] xs:w-[100%] sm:w-[100%] md:w-[100%] lg:w-[80%] xl:w-[80%] 2xl:w-[80%] p-2 pl-4 rounded-md"
               type="tel"
               placeholder="Your phone number"
             />
           </span>
 
           <input
-            class="border w-[15%] p-2 bg-black text-white rounded-md text-[0.85rem] font-semibold cursor-pointer"
+            class="border xs:w-fit xs:p-2 xs:px-6 sm:w-fit sm:p-2 sm:px-6 md:p-2 md:px-6 md:w-fit lg:w-fit xl:w-fit 2xl:w-fit lg:p-2 xl:p-2 2xl:p-2 bg-black text-white rounded-md xs:text-[0.65rem] sm:text-[0.65rem] md:text-[0.7rem] lg:text-[0.85rem] xl:text-[0.85rem] 2xl:text-[0.85rem] font-semibold cursor-pointer"
             type="submit"
             value="Sign Up"
           />
@@ -240,10 +276,10 @@
     <footer class="bg-gray-200">
       <!-- First container -->
       <div
-        class="py-4 px-8 flex justify-between items-start border-[1px] border-b-white"
+        class="py-4 px-8 flex flex-wrap justify-between items-start border-[1px] gap-y-10 border-b-white"
       >
         <!-- First child -->
-        <div>
+        <div class="w-[350px] flex-shrink-0">
           <!-- Heading container  -->
           <div class="mb-5">
             <h5 class="font-bold text-lg">Customer Service</h5>
@@ -268,7 +304,7 @@
         </div>
 
         <!-- Second child -->
-        <div>
+        <div class="w-[350px] flex-shrink-0">
           <!-- Heading container  -->
           <div class="mb-5">
             <h5 class="font-bold text-lg">About FARFETCH</h5>
@@ -289,7 +325,7 @@
         </div>
 
         <!-- Third child -->
-        <div>
+        <div class="w-[350px] flex-shrink-0">
           <!-- Heading container  -->
           <div class="mb-5">
             <h5 class="font-bold text-lg">Discounts and membership</h5>
@@ -319,7 +355,7 @@
 
             <!-- Content container  -->
 
-            <div class="flex justify-between items-start">
+            <div class="w-[60%] flex justify-between items-start">
               <!-- Facebook div  -->
               <div>
                 <a href="/"
@@ -367,7 +403,9 @@
       <!-- Second container  -->
       <div class="py-4 px-8">
         <!-- First child  -->
-        <div class="flex items-center gap-x-10 mb-4">
+        <div
+          class="flex flex-wrap gap-10 gap-y-4 items-center xs:mb-6 sm:mb-6 md:mb-6 lg:mb-4"
+        >
           <div>
             <p class="capitalize hover:text-gray-500 underline">
               <a href="/">privacy policy</a>
@@ -391,7 +429,7 @@
         </div>
 
         <!-- Second child  -->
-        <div class="w-[70%]">
+        <div class="sm:w-[90%] md:w-[90%] lg:w-[70%]">
           <p class="text-sm tracking-wide text-justify">
             'FARFETCH' and the 'FARFETCH' logo are trade marks of FARFETCH UK
             Limited and are registered in numerous jurisdictions around the
